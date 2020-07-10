@@ -213,8 +213,8 @@ thead {
 }
 
 .markdown-preview-view mark {
-  color: #bbc0c5;
-  background-color: #44475a;;
+  color: #8be9fd;
+  background-color: #44475a;
 }
 
 /* dashes in bullets */
@@ -261,6 +261,8 @@ thead {
 ul ul::before {
   left: -11px; top: 0; bottom: 0;
 }
+
+/*********** SIDEBAR STUFF GOES HERE ***********/
 
 /* NORMAL TEXT OUTSIDE OF HEADINGS AND CODE */
 /* preview */
