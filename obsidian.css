@@ -1,0 +1,428 @@
+.theme-dark {
+  --background-primary: #282A36;
+  --background-primary-alt: #44475a;
+  --background-secondary: #202225;
+  --background-secondary-alt: ##282a36;
+  --text-normal: #f8f8f2;
+  --text-title-h1: #bd93f9;
+  --text-title-h2: #bd93f8;
+  --text-title-h3: #bd93f7;
+  --text-title-h4: #bd93f6;
+  --text-title-h5: #bd93f5;
+  --text-title-h6: #bd93f4;
+  --text-link: #ff79c6;
+  --text-a: #8be9fd;
+  --text-a-hover: #8be8ea;
+  --text-mark: #f1fa8c;
+/*  --pre-code: #44475a; */
+/*  --text-highlight-bg: #606052; */
+  --interactive-accent: #f1fa8c; /* unsure if required, check on completion */
+/*  --interactive-before: #5e6565; */
+/*  --background-modifier-border: #92a1a17a; */
+/*  --blockquote-border: rgba(77, 60, 166, .6); */
+/*  --text-accent: #FF79C6; */
+  --interactive-accent-rgb: #f1fa8c;
+  --font-family-editor: Avenir, Avenir Next, sans-serif;
+  --font-family-preview: Avenir, Avenir Next, sans-serif;
+}
+
+/* GRAPH VIEW */
+#graph-view-canvas .links {
+  stroke: var(--interactive-accent-rgb) !important;
+}
+
+/* ANDY MATUSCHAK MODE*/
+/* V2! for 0.7.0! (2.7?) */
+
+.mod-root.workspace-split.mod-vertical {
+  overflow-x:auto;
+  --header-width: 36px; /* <- 36px is the header height in the default theme */
+}
+.mod-root.workspace-split.mod-vertical > div {
+  min-width: calc(700px + var(--header-width)); /* <-- 700px is the default theme's "readable" max-width */
+  box-shadow: 0px 0px 20px 20px #202225;
+  position:sticky;
+  left:0;
+}
+
+/* shift sticky position, so titles will stack up to the left */
+/* This will currently stack to a maximum of 10 before resetting */
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-8) { left: calc(var(--header-width) * 0); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-7) { left: calc(var(--header-width) * 1); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-6) { left: calc(var(--header-width) * 2); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-5) { left: calc(var(--header-width) * 3); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-4) { left: calc(var(--header-width) * 4); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-3) { left: calc(var(--header-width) * 5); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-2) { left: calc(var(--header-width) * 6); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-1) { left: calc(var(--header-width) * 7); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n+0) { left: calc(var(--header-width) * 8); }
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n+1) { left: calc(var(--header-width) * 9); }
+
+/* fancy vertical titles */
+.workspace-leaf-content {
+  padding-left: var(--header-width);
+  position: relative;
+}
+
+.view-header {
+  writing-mode: vertical-lr;
+  border-right: 1px solid var(--background-secondary-alt);
+  border-left: 2px solid var(--background-secondary-alt);
+  border-top: none;
+  border-bottom: none;
+  height: auto;
+  width: var(--header-width);
+  position: absolute;
+  left:0;
+  top:0;
+  bottom:0;
+}
+
+/* active titles have different border colours */
+.workspace-leaf.mod-active .view-header {
+  border-right: 2px solid var(--interactive-accent);
+  border-bottom: none;
+}
+
+/* unset the title container height and swap padding */
+.view-header-title-container {
+  height: unset;
+  padding-left: unset;
+  padding-top: 5px;
+}
+
+/* fix the long-title-obscuring shadows */
+.view-header-title-container:after {
+  width: 100%;
+  height: 30px;
+  top:unset;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, var(--background-secondary));
+}
+.workspace-leaf.mod-active .view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-primary-alt));
+}
+
+/* swap the padding/margin around for the header and actions icons */
+.view-header-icon, .view-actions {
+  padding: 10px 5px;
+}
+.view-action {
+  margin: 8px 0;
+}
+
+/* get rid of the gap left by the now-missing horizontal title */
+.view-content {
+  height: 100%;
+}
+
+/* make the fake drop target overlay have a background so you can see it. */
+/* TODO: figure out how the fake target overlay works so we can put the title back, too */
+.workspace-fake-target-overlay {
+  background-color: var(--background-primary);
+}
+
+/* IMAGES */
+/* embedded images */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* enlarge image on hover */
+  .markdown-preview-view img {
+  display: block;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;  /* experiment with values */
+  transition:transform 0.25s ease;
+}
+
+.markdown-preview-view img:hover {
+  -webkit-transform:scale(1.8); /* experiment with values */
+  transform:scale(2);
+}
+
+/* TABLES */
+th {
+  font-weight: 800 !important;
+}
+
+thead {
+  border-bottom: 4px solid var(--background-modifier-border);
+}
+
+.table {
+  background-color: var(--background-secondary-alt);
+  border: 1px solid var(--background-modifier-border);
+  padding: 4px;
+  line-height: normal;
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* UL, OL, BULLETS, CHECKBOXES & FOLDING ARROWS */
+/* task lists */
+.markdown-preview-view .task-list-item-checkbox {
+  -webkit-appearance: none;
+  top: 1.3px !important;
+  box-sizing: border-box;
+  border: 1px solid  var(--accent-2);
+  position: relative;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+  box-shadow: 0 0 0.1em #f1fa8c;
+}
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+  content: '✓';
+  position: absolute;
+  color: #f1fa8c;
+  font-size:1em;
+  line-height: 1.25em;
+  width:1.2em;
+  text-align:center;
+  text-shadow: 0 0 0.5em var(--accent-2);
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+  top: 0px;
+}
+
+.checkbox-container {
+  background-color: #44475a;
+  border-radius: 14px;
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  top: 4px;
+  user-select: none;
+  width: 42px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+  transition: background 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border 0.15s ease-in-out, opacity 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.checkbox-container.is-enabled {
+  background-color: #44475a;
+}
+
+.markdown-preview-view mark {
+  color: #bbc0c5;
+  background-color: #44475a;;
+}
+
+/* dashes in bullets */
+.cm-formatting-list {
+  font-weight: 700;
+}
+
+.cm-formatting  /* This is the color of header hashtags. Don't change. */
+.cm-formatting-list-ul
+.cm-list-1 /* This is the color of text in lists. Don't change. */
+
+/* Subtler code folding arrows */
+.CodeMirror-foldgutter-folded:after, .CodeMirror-foldgutter-open:after {
+  opacity: 0.5;
+  font-size: 60%;
+}
+
+.CodeMirror-foldgutter-folded:hover:after, .CodeMirror-foldgutter-open:hover:after {
+  opacity: 1;
+}
+
+.CodeMirror-foldgutter-folded:after {
+  content: "\25BA";
+}
+
+.CodeMirror-foldgutter-open:after {
+  content: "\25BC";
+}
+
+/* Bullet Point Relationship Lines */
+.cm-hmd-list-indent .cm-tab, ul ul {
+  position: relative; }
+
+.cm-hmd-list-indent .cm-tab::before, ul ul::before {
+  content:'';
+  border-left: 1px solid rgba(0, 122, 255, 0.25);
+  position: absolute;
+}
+
+.cm-hmd-list-indent .cm-tab::before {
+  left: 0; top: -5px; bottom: -4px;
+}
+
+ul ul::before {
+  left: -11px; top: 0; bottom: 0;
+}
+
+/* NORMAL TEXT OUTSIDE OF HEADINGS AND CODE */
+/* preview */
+.markdown-preview-view {
+  font-family: var(--font-family-preview);
+  font-size: 15px;
+  color: var(--text-normal);
+  padding-left: 8% !important;
+  padding-right: 4% !important;
+}
+
+.mod-single-child .markdown-preview-view {
+  font-family: var(--font-family-preview);
+  font-size: 15px;
+  color: var(--text-normal);
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+
+/* editor */
+.cm-s-obsidian {
+  font-family: var(--font-family-editor);
+  font-size: 15px;
+  color: var(--text-normal);
+  padding-left: 8% !important;
+  padding-right: 4% !important;
+}
+
+.mod-single-child .cm-s-obsidian {
+  font-family: var(--font-family-editor);
+  font-size: 15px;
+  color: var(--text-normal);
+  padding-left: 8% !important;
+  padding-right: 4% !important;
+}
+
+/* HEADINGS */
+/* preview */
+.markdown-preview-view h1 {
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-title-h1);
+}
+
+.markdown-preview-view h2 {
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-title-h2);
+}
+
+.markdown-preview-view h3 {
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--text-title-h3);
+}
+
+.markdown-preview-view h4 {
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-title-h4);
+}
+
+.markdown-preview-view h5 {
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-title-h5);
+}
+
+.markdown-preview-view h6 {
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-title-h6);
+}
+
+/* editor */
+.cm-header-1 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-title-h1);
+}
+
+.cm-header-2 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-title-h2);
+}
+
+.cm-header-3 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--text-title-h3);
+}
+
+.cm-header-4 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-title-h4);
+}
+
+.cm-header-5 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-title-h5);
+}
+
+.cm-header-6 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-title-h6);
+}
+
+/* HIGHLIGHT */
+mark {
+  background-color: var(--text-mark) !important;
+  padding-top: 4px;
+  padding-bottom: 1px;
+}
+
+/* BOLD */
+/* preview */
+strong {
+  color: #ffb86c;
+  font-weight: 700;
+}
+
+/* editor */
+.cm-strong {
+  color: #ffb86c;
+  font-weight: 700;
+}
+
+/* ITALICS */
+/* preview */
+em {
+  color: #f1fa8c;
+}
+
+/* editor */
+.cm-em {
+  color: #f1fa8c;
+}

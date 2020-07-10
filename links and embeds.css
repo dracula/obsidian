@@ -1,0 +1,112 @@
+/* Tag Color in PREVIEW MODE */
+
+a.tag {
+  color: #59a2c5 !important;
+}
+
+/* Tag Color in EDITOR MODE */
+
+.cm-hashtag {
+  color: #59a2c5 !important;
+}
+
+
+
+
+
+
+/* LINKS & BRACKETS */
+
+/* link */
+a,
+.internal-link,
+.cm-hmd-internal-link,
+.cm-link,
+.cm-formatting-link
+{
+  color: var(--text-a) !important;
+  text-decoration: none !important;
+  font-family: Avenir !important;
+}
+
+/* link hover color */
+a:hover,
+.internal-link:hover
+{
+  color: var(--text-a-hover) !important;
+  text-decoration: none !important;
+}
+
+/* make external links italics to differentiate */
+a:not(.internal-link) {
+  font-style: italic;
+}
+
+
+/* horizontal line in preview */
+.markdown-preview-view hr
+{
+  background-color: var(--text-normal);
+}
+
+
+
+
+
+/* internal embedded link rendering in preview */
+.markdown-embed-title
+{
+  font-weight: 600;
+}
+
+.markdown-embed
+{
+  padding-left: 8px !important;
+  padding-right: 4px !important;
+  margin-left: 8px !important;
+  margin-right: 4px !important;
+}
+
+
+
+
+/* internal embedded link rendering in preview */
+.markdown-embed-title
+{
+  font-weight: 600;
+}
+
+.markdown-embed
+{
+  padding-left: 8px !important;
+  padding-right: 4px !important;
+  margin-left: 8px !important;
+  margin-right: 4px !important;
+}
+
+
+
+
+
+/* NAKED EMBEDS*/
+/* But keeping Border and Scroll! */
+.markdown-embed-title {
+  display:none;
+}
+
+.markdown-preview-view .markdown-embed-content>:first-child {
+  margin-top: 0;
+}
+
+.markdown-preview-view .markdown-embed-content>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-embed-link {
+color: #59a2c5 !important;
+right: 2px !important;
+}
+
+.markdown-embed-link:hover {
+color: #b3a14b !important;
+}
