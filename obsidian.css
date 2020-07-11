@@ -226,7 +226,10 @@ blockquote:before {
   line-height: 0.1em;
   vertical-align: -0.4em;
 }
-blockquote p { display: inline; }
+
+blockquote p {
+  display: inline;
+}
 
 /* ANDY MATUSCHAK MODE*/
 /* V2! for 0.7.0! (2.7?) */
@@ -335,7 +338,8 @@ blockquote p { display: inline; }
 }
 
 /* swap the padding/margin around for the header and actions icons */
-.view-header-icon, .view-actions {
+.view-header-icon,
+.view-actions {
   padding: 10px 5px;
   background: var(--background-secondary-alt);
 }
@@ -457,13 +461,15 @@ thead {
 
 /* This is the color of text in lists. Don't change. */
 /* Subtler code folding arrows */
-.CodeMirror-foldgutter-folded:after, .CodeMirror-foldgutter-open:after {
+.CodeMirror-foldgutter-folded:after,
+.CodeMirror-foldgutter-open:after {
   opacity: 0.5;
   font-size: 60%;
   color: var(--text-link);
 }
 
-.CodeMirror-foldgutter-folded:hover:after, .CodeMirror-foldgutter-open:hover:after {
+.CodeMirror-foldgutter-folded:hover:after,
+.CodeMirror-foldgutter-open:hover:after {
   opacity: 1;
   font-size: 60%;
   color: var(--text-link);
@@ -480,11 +486,13 @@ thead {
 }
 
 /* Bullet Point Relationship Lines */
-.cm-hmd-list-indent .cm-tab, ul ul {
+.cm-hmd-list-indent .cm-tab,
+ul ul {
   position: relative;
 }
 
-.cm-hmd-list-indent .cm-tab::before, ul ul::before {
+.cm-hmd-list-indent .cm-tab::before,
+ul ul::before {
   content: '';
   border-left: 1px solid;
   color: #8abeb7;
@@ -509,13 +517,13 @@ ul ul::before {
 }
 
 ol {
-    display: block;
-    list-style-type: decimal;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 }
 
 /* SIDEBAR & DOCK ETC. */
@@ -525,7 +533,8 @@ ol {
   text-decoration: none !important;
 }
 
-.view-action:hover, .view-action.is-active {
+.view-action:hover,
+.view-action.is-active {
   color: var(--text-normal) !important;
 }
 
@@ -541,9 +550,8 @@ ol {
 .workspace-ribbon.mod-left.is-collapsed {
   color: var(--background-secondary-alt) !important;
 }
+
 /****** collapsed ribbons, THIS IS NOT WORKING ******/
-
-
 .status-bar {
   background-color: var(--background-secondary-alt);
 }
@@ -585,8 +593,8 @@ ol {
   color: #50FA7B !important;
 }
 
-.side-dock-ribbon-tab, .side-dock-ribbon-action {}
-
+/* .side-dock-ribbon-tab,
+.side-dock-ribbon-action {} */
 .side-dock-ribbon-tab.is-active {
   color: #f1fa8c !important;
 }
