@@ -11,12 +11,13 @@
   --text-title-h5: #bd93f5;
   --text-title-h6: #bd93f4;
   --text-link: #8be9fd;
+  --markup-code: #ffb86c;
+  --text-tag: #50FA7B;
   --text-a: #FF79C6;
   --text-a-hover: #FF79C0;
   --text-mark: #f1fa8c;
-  --pre-code: #44475a;
   --interactive-accent: #f1fa8c;
-  --blockquote-border: #bd93f9;
+  --blockquote-border: #b294bb;
   --interactive-accent-rgb: #f1fa8c;
   --font-family-editor: Avenir, Avenir Next, sans-serif;
   --font-family-preview: Avenir, Avenir Next, sans-serif;
@@ -101,13 +102,30 @@ a:not(.internal-link) {
   margin-bottom: 0;
 }
 
+.markdown-embed {
+  background-color: var(--background-primary-alt) !important;
+}
+
 .markdown-embed-link {
-  color: var(--text-link) !important;
+  color: var(--text-a) !important;
   right: 2px !important;
 }
 
 .markdown-embed-link:hover {
   color: var(--text-link) !important;
+}
+
+/* NO FILE OPEN PAGE*/
+.empty-state-title {
+  color: var(--text-title-h1) !important;
+}
+
+.empty-state-action {
+  color: var(--text-muted) !important;
+}
+
+.empty-state-action:hover {
+  color: var(--text-normal) !important;
 }
 
 /* GRAPH VIEW */
@@ -126,7 +144,7 @@ pre code {
   padding: 5px !important;
   line-height: normal;
   display: block;
-  background-color: var(--pre-code) !important;
+  background-color: var(--background-primary-alt) !important;
 }
 
 .markdown-preview-view pre {
@@ -136,7 +154,7 @@ pre code {
 /* in-line code for editor and preview and code block for editor*/
 code,
 .cm-inline-code {
-  background-color: var(--pre-code) !important;
+  background-color: var(--background-primary-alt) !important;
   color: var(--text-muted) !important;
   bottom: 0px !important;
 }
@@ -144,17 +162,17 @@ code,
 /* Code Appearance */
 /* editor */
 .CodeMirror-code span.cm-inline-code {
-  color: #ffb86c !important;
+  color: var(--markup-code) !important;
 }
 
 /* Editor CodeBlock TEXT Appearance - */
 .cm-s-obsidian pre.HyperMD-codeblock {
-  color: #ffb86c !important;
+  color: var(--markup-code) !important;
 }
 
 /* preview */
 .markdown-preview-view code {
-  color: #ffb86c !important;
+  color: var(--markup-code) !important;
   background-color: #44475a !important;
   bottom: -0.1px !important;
 }
@@ -199,6 +217,16 @@ blockquote {
   font-style: italic;
   border-color: var(--blockquote-border) !important;
 }
+
+/* Add quotation character before quote */
+blockquote:before {
+  font: 14px/20px italic Times, serif;
+  content: "“";
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+blockquote p { display: inline; }
 
 /* ANDY MATUSCHAK MODE*/
 /* V2! for 0.7.0! (2.7?) */
@@ -554,7 +582,7 @@ ol {
 
 /* html tags in editor */
 .cm-tag {
-  color: var(--text-muted) !important;
+  color: #50FA7B !important;
 }
 
 .side-dock-ribbon-tab, .side-dock-ribbon-action {}
@@ -797,12 +825,12 @@ ol {
 /* TAGS */
 /* preview */
 a.tag {
-  color: #ff79c6 !important;
+  color: var(--text-tag) !important;
 }
 
 /* editor */
 .cm-hashtag {
-  color: #ff79c6 !important;
+  color: var(--text-tag) !important;
 }
 
 /* HIGHLIGHT */
@@ -815,13 +843,13 @@ mark {
 /* BOLD */
 /* preview */
 strong {
-  color: #ffb86c;
+  color: var(--markup-code);
   font-weight: 700;
 }
 
 /* editor */
 .cm-strong {
-  color: #ffb86c;
+  color: var(--markup-code);
   font-weight: 700;
 }
 
