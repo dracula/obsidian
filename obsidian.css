@@ -15,13 +15,8 @@
   --text-a-hover: #FF79C0;
   --text-mark: #f1fa8c;
   --pre-code: #44475a;
-  /*  --text-highlight-bg: #606052; */
-  --interactive-accent: #f1fa8c; /* unsure if required, check on completion */
-  /*  --interactive-before: #5e6565; */
-  /*  --background-modifier-border: #92a1a17a; */
+  --interactive-accent: #f1fa8c;
   --blockquote-border: #bd93f9;
-  --text-accent: #FF79C6; /* unsure if required, check on completion */
-  /* --text-muted: #6272a4; */
   --interactive-accent-rgb: #f1fa8c;
   --font-family-editor: Avenir, Avenir Next, sans-serif;
   --font-family-preview: Avenir, Avenir Next, sans-serif;
@@ -389,7 +384,7 @@ thead {
 .markdown-preview-view .task-list-item-checkbox:checked::before {
   content: '✓';
   position: absolute;
-  color: #f1fa8c;
+  color: var(--interactive-accent);
   font-size: 1em;
   line-height: 1.25em;
   width: 1.2em;
@@ -437,14 +432,19 @@ thead {
 .CodeMirror-foldgutter-folded:after, .CodeMirror-foldgutter-open:after {
   opacity: 0.5;
   font-size: 60%;
+  color: var(--text-link);
 }
 
 .CodeMirror-foldgutter-folded:hover:after, .CodeMirror-foldgutter-open:hover:after {
   opacity: 1;
+  font-size: 60%;
+  color: var(--text-link);
 }
 
 .CodeMirror-foldgutter-folded:after {
   content: "\25BA";
+  font-size: 60%;
+  color: var(--text-link);
 }
 
 .CodeMirror-foldgutter-open:after {
@@ -458,7 +458,8 @@ thead {
 
 .cm-hmd-list-indent .cm-tab::before, ul ul::before {
   content: '';
-  border-left: 1px solid rgba(0, 122, 255, 0.25);
+  border-left: 1px solid;
+  color: #8abeb7;
   position: absolute;
 }
 
@@ -469,9 +470,24 @@ thead {
 }
 
 ul ul::before {
-  left: -11px;
+  left: 0px;
   top: 0;
   bottom: 0;
+}
+
+/* ul & ol colors in editor */
+.cm-s-obsidian span.cm-formatting-list {
+  color: #8abeb7;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }
 
 /* SIDEBAR & DOCK ETC. */
@@ -485,8 +501,31 @@ ul ul::before {
   color: var(--text-normal) !important;
 }
 
+/****** collapsed ribbons, THIS IS NOT WORKING ******/
+.workspace-ribbon.is-collapsed {
+  color: var(--background-secondary-alt) !important;
+}
+
+.workspace-ribbon.mod-right.is-collapsed {
+  color: var(--background-secondary-alt) !important;
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+  color: var(--background-secondary-alt) !important;
+}
+/****** collapsed ribbons, THIS IS NOT WORKING ******/
+
+
+.status-bar {
+  background-color: var(--background-secondary-alt);
+}
+
 .side-dock-ribbon-action {
   color: var(--text-muted) !important;
+}
+
+.side-dock-ribbon-action:hover {
+  color: var(--text-normal) !important;
 }
 
 .workspace-tab-header {
@@ -548,7 +587,7 @@ ul ul::before {
 }
 
 .search-result-file-title {
-  color: var(--text-link) !important;
+  color: var(--text-a) !important;
   background-color: #282a36;
 }
 
