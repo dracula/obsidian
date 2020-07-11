@@ -2,7 +2,7 @@
   --background-primary: #282A36;
   --background-primary-alt: #44475a;
   --background-secondary: #282a36;
-  --background-secondary-alt: #282a36;
+  --background-secondary-alt: #1a1e24;
   --text-normal: #f8f8f2;
   --text-title-h1: #bd93f9;
   --text-title-h2: #bd93f8;
@@ -21,21 +21,11 @@
   /*  --background-modifier-border: #92a1a17a; */
   --blockquote-border: #bd93f9;
   --text-accent: #FF79C6; /* unsure if required, check on completion */
+  /* --text-muted: #6272a4; */
   --interactive-accent-rgb: #f1fa8c;
   --font-family-editor: Avenir, Avenir Next, sans-serif;
   --font-family-preview: Avenir, Avenir Next, sans-serif;
 }
-
-/* VIEW ACTION BUTTONS */
-.view-action {
-  color: var(--text-muted) !important;
-  text-decoration: none !important;
-}
-
-.view-action:hover, .view-action.is-active {
-    color: #f8f8f2 !important;
-}
-
 
 /* LINKS & BRACKETS */
 /* link */
@@ -47,6 +37,17 @@ a,
   color: var(--text-a) !important;
   text-decoration: none !important;
   font-family: Avenir, Avenir Next, sans-serif !important;
+}
+
+/* url's */
+/* editor */
+.cm-url {
+  color: var(--text-link) !important;
+}
+
+/* preview */
+.external-link {
+  color: var(--text-link) !important;
 }
 
 /* link hover color */
@@ -81,7 +82,7 @@ a:not(.internal-link) {
 /* internal embedded link rendering in preview */
 .markdown-embed-title {
   font-weight: 600;
-  color: #8be9fd;
+  color: var(--text-link);
 }
 
 .markdown-embed {
@@ -106,12 +107,12 @@ a:not(.internal-link) {
 }
 
 .markdown-embed-link {
-  color: #8be9fd !important;
+  color: var(--text-link) !important;
   right: 2px !important;
 }
 
 .markdown-embed-link:hover {
-  color: #8be9fd !important;
+  color: var(--text-link) !important;
 }
 
 /* GRAPH VIEW */
@@ -284,6 +285,7 @@ blockquote {
 
 /* active titles have different border colours */
 .workspace-leaf.mod-active .view-header {
+  background-color: var(--background-secondary-alt) !important;
   border-right: 2px solid var(--interactive-accent);
   border-bottom: none;
 }
@@ -293,6 +295,7 @@ blockquote {
   height: unset;
   padding-left: unset;
   padding-top: 5px;
+  background: var(--background-secondary-alt);
 }
 
 /* fix the long-title-obscuring shadows */
@@ -301,16 +304,17 @@ blockquote {
   height: 30px;
   top: unset;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent, var(--background-secondary));
+  background: linear-gradient(to bottom, transparent, var(--background-secondary-alt));
 }
 
 .workspace-leaf.mod-active .view-header-title-container:after {
-  background: linear-gradient(to bottom, transparent, var(--background-primary-alt));
+  background: linear-gradient(to bottom, transparent, var(--background-secondary-alt));
 }
 
 /* swap the padding/margin around for the header and actions icons */
 .view-header-icon, .view-actions {
   padding: 10px 5px;
+  background: var(--background-secondary-alt);
 }
 
 .view-action {
@@ -415,7 +419,7 @@ thead {
 }
 
 .markdown-preview-view mark {
-  color: #8be9fd;
+  color: var(--text-link);
   background-color: #44475a;
 }
 
@@ -471,10 +475,33 @@ ul ul::before {
 }
 
 /* SIDEBAR & DOCK ETC. */
+/* view action buttons */
+.view-action {
+  color: var(--text-muted) !important;
+  text-decoration: none !important;
+}
+
+.view-action:hover, .view-action.is-active {
+  color: var(--text-normal) !important;
+}
+
+.side-dock-ribbon-action {
+  color: var(--text-muted) !important;
+}
+
+.workspace-tab-header {
+  color: var(--text-muted) !important;
+  text-decoration: none !important;
+}
+
+.workspace-tab-header:hover {
+  color: var(--text-normal) !important;
+}
+
 /* searchbar */
 .side-dock-panels-container {
-  background-color: #282a36 !important;
-  color: #282a36;
+  background-color: #1a1e24 !important;
+  color: var(background-secondary-alt);
 }
 
 /* icons at top of panes*/
@@ -513,20 +540,20 @@ ul ul::before {
 }
 
 .nav-file-title:hover {
-  color: #f8f8f2 !important;
+  color: var(--text-normal) !important;
 }
 
 .nav-folder-title:hover {
-  color: #f8f8f2 !important;
+  color: var(--text-normal) !important;
 }
 
 .search-result-file-title {
-  color: #8be9fd !important;
+  color: var(--text-link) !important;
   background-color: #282a36;
 }
 
 .search-result-file-matched-text {
-  color: #8be9fd !important;
+  color: var(--text-link) !important;
   background-color: #282a36;
 }
 
@@ -534,7 +561,7 @@ ul ul::before {
   color: #59a2c5;
   } /* for the PNG text, but can't specifically target "PNG", just all of those filetype tags. */
 .nav-file.is-active .nav-file-tag {
-  color: #f8f8f2;
+  color: var(--text-normal);
 }
 
 /* side dock text, like file names and backlink context */
@@ -555,7 +582,7 @@ ul ul::before {
 .side-dock-ribbon-action.is-active:hover,
 .nav-action-button:hover,
 .side-dock-collapse-btn:hover {
-  color: #f8f8f2;
+  color: var(--text-normal);
 }
 
 /* condense line spacing on file explorer title list. also avoids character-level word breaks */
