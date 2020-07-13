@@ -53,11 +53,7 @@ a,
 
 /* link hover color */
 
-a:hover,
-.internal-link:hover {
-  color: var(--text-a-hover) !important;
-  text-decoration: none !important;
-}
+/* redacted */
 
 /* make external links italics to differentiate */
 
@@ -195,7 +191,7 @@ code,
 
 .markdown-preview-view code {
   color: var(--markup-code) !important;
-  background-color: #44475a !important;
+  background-color: var(--background-primary-alt) !important;
   bottom: -0.1px !important;
 }
 
@@ -235,14 +231,14 @@ code,
 /* editor */
 
 .cm-quote {
-  color: #f1fa8c !important;
+  color: var(--interactive-accent) !important;
   font-style: italic;
 }
 
 /* preview */
 
 blockquote {
-  color: #f1fa8c !important;
+  color: var(--interactive-accent) !important;
   font-style: italic;
   border-color: var(--blockquote-border) !important;
 }
@@ -368,11 +364,7 @@ blockquote p {
   height: 30px;
   top: unset;
   bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    var(--background-secondary-alt)
-  );
+  background: var(--background-secondary-alt) !important;
 }
 
 .workspace-leaf.mod-active .view-header-title-container:after {
@@ -455,143 +447,6 @@ thead {
   border-bottom-left-radius: 4px;
 }
 
-/* UL, OL, BULLETS, CHECKBOXES & FOLDING ARROWS */
-
-/* task lists */
-
-.markdown-preview-view .task-list-item-checkbox {
-  -webkit-appearance: none;
-  top: 1.3px !important;
-  box-sizing: border-box;
-  border: 1px solid var(--accent-2);
-  position: relative;
-  width: 1.25em;
-  height: 1.25em;
-  margin: 0;
-  box-shadow: 0 0 0.1em #f1fa8c;
-}
-
-.markdown-preview-view .task-list-item-checkbox:checked::before {
-  content: "✓";
-  position: absolute;
-  color: var(--interactive-accent);
-  font-size: 1em;
-  line-height: 1.25em;
-  width: 1.2em;
-  text-align: center;
-  text-shadow: 0 0 0.5em var(--accent-2);
-}
-
-.markdown-preview-view .task-list-item-checkbox {
-  top: 0px;
-}
-
-.checkbox-container {
-  background-color: #44475a;
-  border-radius: 14px;
-  display: inline-block;
-  height: 22px;
-  position: relative;
-  top: 4px;
-  user-select: none;
-  width: 42px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
-  transition: background 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-    border 0.15s ease-in-out, opacity 0.15s ease-in-out,
-    -webkit-box-shadow 0.15s ease-in-out;
-}
-
-.checkbox-container.is-enabled {
-  background-color: #44475a;
-}
-
-.markdown-preview-view mark {
-  color: var(--text-link);
-  background-color: #44475a;
-}
-
-/* dashes in bullets */
-
-.cm-formatting-list {
-  font-weight: 700;
-}
-
-.cm-formatting
-/* This is the color of header hashtags. Don't change. */
-
-.cm-formatting-list-ul .cm-list-1
-/* This is the color of text in lists. Don't change. */
-
-
-/* Subtler code folding arrows */
-
-.CodeMirror-foldgutter-folded:after,
-.CodeMirror-foldgutter-open:after {
-  opacity: 0.5;
-  font-size: 60%;
-  color: var(--text-link);
-}
-
-.CodeMirror-foldgutter-folded:hover:after,
-.CodeMirror-foldgutter-open:hover:after {
-  opacity: 1;
-  font-size: 60%;
-  color: var(--text-link);
-}
-
-.CodeMirror-foldgutter-folded:after {
-  content: "\25BA";
-  font-size: 60%;
-  color: var(--text-link);
-}
-
-.CodeMirror-foldgutter-open:after {
-  content: "\25BC";
-}
-
-/* Bullet Point Relationship Lines */
-
-.cm-hmd-list-indent .cm-tab,
-ul ul {
-  position: relative;
-}
-
-.cm-hmd-list-indent .cm-tab::before,
-ul ul::before {
-  content: "";
-  border-left: 1px solid;
-  color: #8abeb7;
-  position: absolute;
-}
-
-.cm-hmd-list-indent .cm-tab::before {
-  left: 0;
-  top: -5px;
-  bottom: -4px;
-}
-
-ul ul::before {
-  left: 0px;
-  top: 0;
-  bottom: 0;
-}
-
-/* ul & ol colors in editor */
-
-.cm-s-obsidian span.cm-formatting-list {
-  color: #8abeb7;
-}
-
-ol {
-  display: block;
-  list-style-type: decimal;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-}
-
 /* SIDEBAR & DOCK ETC. */
 
 /* view action buttons */
@@ -605,22 +460,6 @@ ol {
 .view-action.is-active {
   color: var(--text-normal) !important;
 }
-
-/****** collapsed ribbons, THIS IS NOT WORKING ******/
-
-.workspace-ribbon.is-collapsed {
-  color: var(--background-secondary-alt) !important;
-}
-
-.workspace-ribbon.mod-right.is-collapsed {
-  color: var(--background-secondary-alt) !important;
-}
-
-.workspace-ribbon.mod-left.is-collapsed {
-  color: var(--background-secondary-alt) !important;
-}
-
-/****** collapsed ribbons, THIS IS NOT WORKING ******/
 
 .status-bar {
   background-color: var(--background-secondary-alt);
@@ -646,7 +485,7 @@ ol {
 /* searchbar */
 
 .side-dock-panels-container {
-  background-color: #1a1e24 !important;
+  background-color: var(--background-secondary-alt) !important;
   color: var(background-secondary-alt);
 }
 
@@ -663,29 +502,29 @@ ol {
 /* html tags in editor */
 
 .cm-tag {
-  color: #50fa7b !important;
+  color: var(--text-tag) !important;
 }
 
 /* .side-dock-ribbon-tab,
 .side-dock-ribbon-action {} */
 
 .side-dock-ribbon-tab.is-active {
-  color: #f1fa8c !important;
+  color: var(--interactive-accent) !important;
 }
 
 .side-dock-ribbon-tab.is-active .side-dock-ribbon-tab-inner:hover {
   color: #6272a4 !important;
-  background-color: #282a36;
+  background-color: var(--background-secondary);
 }
 
 .nav-file-title {
   color: var(--text-muted) !important;
-  background-color: #282a36;
+  background-color: var(--background-secondary);
 }
 
 .nav-folder-title {
   color: var(--text-muted) !important;
-  background-color: #282a36;
+  background-color: var(--background-secondary);
 }
 
 .nav-file-title:hover {
@@ -698,12 +537,12 @@ ol {
 
 .search-result-file-title {
   color: var(--text-a) !important;
-  background-color: #282a36;
+  background-color: var(--background-secondary);
 }
 
 .search-result-file-matched-text {
   color: var(--text-link) !important;
-  background-color: #282a36;
+  background-color: var(--background-secondary);
 }
 
 /* .nav-file-tag {
@@ -932,14 +771,6 @@ a.tag {
   color: var(--text-tag) !important;
 }
 
-/* HIGHLIGHT */
-
-mark {
-  background-color: var(--text-mark) !important;
-  padding-top: 4px;
-  padding-bottom: 1px;
-}
-
 /* BOLD */
 
 /* preview */
@@ -961,11 +792,178 @@ strong {
 /* preview */
 
 em {
-  color: #f1fa8c;
+  color: var(--interactive-accent);
 }
 
 /* editor */
 
 .cm-em {
-  color: #f1fa8c;
+  color: var(--interactive-accent);
+}
+
+/* HIGHLIGHT */
+
+mark {
+  color: var(--text-normal) !important;
+  background-color: var(--text-highlight-bg) !important;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* COLLAPSED RIBBONS */
+
+.workspace-ribbon.is-collapsed {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+.workspace-ribbon.mod-right.is-collapsed {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+/* POPUP NOTIFICATION*/
+
+.notice {
+  color: var(--text-normal) !important;
+  background-color: var(--blockquote-border) !important;
+}
+
+/* UL, OL, BULLETS, CHECKBOXES & FOLDING ARROWS */
+
+/* task lists */
+
+.markdown-preview-view .task-list-item-checkbox {
+  -webkit-appearance: none;
+  top: 1.3px !important;
+  box-sizing: border-box;
+  border: 1px solid var(--accent-2);
+  position: relative;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+  box-shadow: 0 0 0.1em var(--interactive-accent);
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+  content: "✓";
+  position: absolute;
+  color: var(--interactive-accent);
+  font-size: 1em;
+  line-height: 1.25em;
+  width: 1.2em;
+  text-align: center;
+  text-shadow: 0 0 0.5em var(--accent-2);
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+  top: 0px;
+}
+
+.checkbox-container {
+  background-color: var(--background-primary-alt);
+  border-radius: 14px;
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  top: 4px;
+  user-select: none;
+  width: 42px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+  transition: background 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    border 0.15s ease-in-out, opacity 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.checkbox-container.is-enabled {
+  background-color: var(--background-primary-alt);
+}
+
+.markdown-preview-view mark {
+  color: var(--text-link);
+  background-color: var(--background-primary-alt);
+}
+
+/* dashes in bullets */
+
+.cm-formatting-list {
+  font-weight: 700;
+}
+
+.cm-formatting
+/* This is the color of header hashtags. Don't change. */
+
+.cm-formatting-list-ul .cm-list-1
+/* This is the color of text in lists. Don't change. */
+
+
+/* Subtler code folding arrows */
+
+.CodeMirror-foldgutter-folded:after,
+.CodeMirror-foldgutter-open:after {
+  opacity: 0.5;
+  font-size: 60%;
+  color: var(--text-link);
+}
+
+.CodeMirror-foldgutter-folded:hover:after,
+.CodeMirror-foldgutter-open:hover:after {
+  opacity: 1;
+  font-size: 60%;
+  color: var(--text-link);
+}
+
+.CodeMirror-foldgutter-folded:after {
+  content: "\25BA";
+  font-size: 60%;
+  color: var(--text-link);
+}
+
+.CodeMirror-foldgutter-open:after {
+  content: "\25BC";
+}
+
+/* Bullet Point Relationship Lines */
+
+.cm-hmd-list-indent .cm-tab,
+ul ul {
+  position: relative;
+}
+
+.cm-hmd-list-indent .cm-tab::before,
+ul ul::before {
+  content: "";
+  border-left: 1px solid;
+  color: #8abeb7;
+  position: absolute;
+}
+
+.cm-hmd-list-indent .cm-tab::before {
+  left: 0;
+  top: -5px;
+  bottom: -4px;
+}
+
+ul ul::before {
+  left: 0px;
+  top: 0;
+  bottom: 0;
+}
+
+/* ul, li & ol colors in editor */
+
+.cm-s-obsidian span.cm-formatting-list {
+  color: #8abeb7;
+}
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 }
