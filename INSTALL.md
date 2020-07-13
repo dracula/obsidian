@@ -1,4 +1,4 @@
-### [X](http://link-to-x.com)
+### [Obsidian.md](http://obsidian.md)
 
 #### Install using Git
 
@@ -12,6 +12,6 @@ Download using the [GitHub .zip download](https://github.com/dracula/template/ar
 
 #### Activating theme
 
-1. Do this
-2. Then that
+1. Turn on 'Custom CSS' plugin in Obsidian: `Settings > Plugins > Custom CSS.`
+2. Download and copy the `obsidian.css` file to the root folder of your Obsidian vault. It should take effect immediately.
 3. Boom! It's working
