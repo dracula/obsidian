@@ -947,7 +947,7 @@ ul ul {
 ul ul::before {
   content: "";
   border-left: 1px solid;
-  color: #8abeb7;
+  color: #92CDD6;
   position: absolute;
 }
 
