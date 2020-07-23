@@ -803,9 +803,20 @@ em {
 
 /* HIGHLIGHT */
 
+/* preview */
+
 mark {
-  color: var(--text-normal) !important;
-  background-color: var(--text-highlight-bg) !important;
+  color: var(--background-primary) !important;
+  background-color: var(--text-mark) !important;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* editor */
+
+.cm-highlight {
+  color: var(--background-primary) !important;
+  background-color: var(--text-mark) !important;
   padding-top: 1px;
   padding-bottom: 1px;
 }
