@@ -967,3 +967,11 @@ ol {
   margin-inline-end: 0px;
   padding-inline-start: 40px;
 }
+
+.suggestion-highlight {
+  color: var(--interactive-accent)!important;
+}
+
+.is-selected {
+  background-color: var(--blockquote-border)!important;
+}
