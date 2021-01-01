@@ -849,6 +849,7 @@ mark {
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
   top: 1.3px !important;
+  right: 5px !important;
   box-sizing: border-box;
   border: 1px solid var(--accent-2);
   position: relative;
