@@ -482,6 +482,11 @@ thead {
   color: var(--text-normal) !important;
 }
 
+button.mod-cta {
+    background-color: var(--interactive-accent);
+    color: var(--interactive-normal);
+}
+
 /* searchbar */
 
 .side-dock-panels-container {
