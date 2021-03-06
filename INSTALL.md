@@ -4,7 +4,7 @@
 
 If you are a git user, you can install the theme and keep up to date by cloning the repo:
 
-    $ git clone https://github.com/dracula/obsidian.git
+    $ git clone https://github.com/dracula/obsidian.git themes
 
 #### Install manually
 
@@ -12,6 +12,6 @@ Download using the [GitHub .zip download](https://github.com/dracula/obsidian/ar
 
 #### Activating theme
 
-1. Turn on 'Custom CSS' plugin in Obsidian: `Settings > Plugins > Custom CSS.`
-2. Download and copy the `obsidian.css` file to the root folder of your Obsidian vault. It should take effect immediately.
-3. Boom! It's working
+1. Clone the project to `.obsidian/themes` directly. If you already have `themes` folder, delete it before clone.
+2. Choose your downloaded theme `Settings > Themes > Theme` at Obsidian tool. It should take effect immediately.
+3. Boom! It's working.
