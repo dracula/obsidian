@@ -8,7 +8,7 @@ git clone https://github.com/dracula/obsidian.git themes
 ```
 #### Install manually
 
-Download using the [GitHub .zip download](https://github.com/dracula/obsidian/archive/master.zip) option and unzip them.
+Download using the [GitHub .zip download](https://github.com/dracula/obsidian/archive/main.zip) option and unzip them.
 
 #### Activating theme
 
