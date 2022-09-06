@@ -12,9 +12,9 @@ All instructions can be found at [draculatheme.com/obsidian](https://draculathem
 
 This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/obsidian/graphs/contributors).
 
-| [![Andy Byers](https://avatars0.githubusercontent.com/u/66736432?v=3&s=70)](https://github.com/andybyers21) |
-| ----------------------------------------------------------------------------------------------------------- |
-| [Andy Byers](https://github.com/andybyers21)                                                                |
+| [![Chrismettal](https://github.com/chrismettal.png?size=100)](https://gitlab.com/chrismettal) | [![Andy Byers](https://avatars0.githubusercontent.com/u/66736432?v=3&s=100)](https://github.com/andybyers21) |
+| ----------------------------------------------------------------------------------------------| ----------------------------------------------------------------------------------------------------------- |
+| [Chrismettal](https://gitlab.com/chrismettal)                                                 | [Andy Byers](https://github.com/andybyers21)                                                                |
 
 ## Contributing
 
