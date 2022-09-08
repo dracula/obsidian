@@ -675,11 +675,6 @@ mark {
   background-color: var(--background-primary-alt);
 }
 
-/* dashes in bullets */
-
-.cm-formatting-list {
-}
-
 .cm-formatting
 /* This is the color of header hashtags. Don't change. */
 
