@@ -16,7 +16,7 @@
   --text-a: #ff79c6;
   --text-a-hover: #ff79c0;
   --text-mark: #f1fa8c;
-  --interactive-accent: #f1fa8c;
+  --interactive-accent: #50fa7b;
   --blockquote-border: #b294bb;
   --interactive-accent-rgb: #f1fa8c;
   --font-family-editor: Avenir, Avenir Next, sans-serif;
@@ -667,8 +667,10 @@ mark {
 }
 
 .checkbox-container.is-enabled {
-  background-color: var(--background-primary-alt);
+  background-color: var(--interactive-accent);
+  color
 }
+
 
 .markdown-preview-view mark {
   color: var(--text-link);
