@@ -169,7 +169,7 @@ pre code {
 code,
 .cm-inline-code {
   background-color: var(--background-primary-alt) !important;
-  color: var(--text-muted) !important;
+  color: var(--markup-code) !important;
   bottom: 0px !important;
 }
 
