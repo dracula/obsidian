@@ -399,16 +399,6 @@ button.mod-cta {
   color: var(--text-normal);
 }
 
-/* condense line spacing on file explorer title list. also avoids character-level word breaks */
-
-.nav-file-title-content,
-.search-result-file-title,
-.search-result-file-match {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  line-height: normal !important;
-  word-break: keep-all;
-}
 
 /* clean up side bar empty state (e.g. unlinked mentions) */
 
