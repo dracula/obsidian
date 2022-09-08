@@ -19,8 +19,6 @@
   --interactive-accent: #50fa7b;
   --blockquote-border: #b294bb;
   --interactive-accent-rgb: #f1fa8c;
-  --font-family-editor: Avenir, Avenir Next, sans-serif;
-  --font-family-preview: Avenir, Avenir Next, sans-serif;
 }
 
 /* LINKS & BRACKETS */
@@ -418,16 +416,6 @@ button.mod-cta {
   line-height: normal;
 }
 
-/* font for everything outside of editor/preview panes */
-
-.app-container {
-  font-family: var(--font-family-preview);
-}
-
-.status-bar-item {
-  font-family: var(--font-family-preview);
-}
-
 /* clean up side bar empty state (e.g. unlinked mentions) */
 
 .search-empty-state {
@@ -442,14 +430,12 @@ button.mod-cta {
 /* preview */
 
 .markdown-preview-view {
-  font-family: var(--font-family-preview);
   color: var(--text-normal);
   padding-left: 8% !important;
   padding-right: 4% !important;
 }
 
 .mod-single-child .markdown-preview-view {
-  font-family: var(--font-family-preview);
   color: var(--text-normal);
   padding-left: 10% !important;
   padding-right: 10% !important;
@@ -458,14 +444,12 @@ button.mod-cta {
 /* editor */
 
 .cm-s-obsidian {
-  font-family: var(--font-family-editor);
   color: var(--text-normal);
   padding-left: 8% !important;
   padding-right: 4% !important;
 }
 
 .mod-single-child .cm-s-obsidian {
-  font-family: var(--font-family-editor);
   color: var(--text-normal);
   padding-left: 8% !important;
   padding-right: 4% !important;
@@ -476,64 +460,52 @@ button.mod-cta {
 /* preview */
 
 .markdown-preview-view h1 {
-  font-family: var(--font-family-preview);
   color: var(--text-title-h1);
 }
 
 .markdown-preview-view h2 {
-  font-family: var(--font-family-preview);
   color: var(--text-title-h2);
 }
 
 .markdown-preview-view h3 {
-  font-family: var(--font-family-preview);
   color: var(--text-title-h3);
 }
 
 .markdown-preview-view h4 {
-  font-family: var(--font-family-preview);
   color: var(--text-title-h4);
 }
 
 .markdown-preview-view h5 {
-  font-family: var(--font-family-preview);
   color: var(--text-title-h5);
 }
 
 .markdown-preview-view h6 {
-  font-family: var(--font-family-preview);
   color: var(--text-title-h6);
 }
 
 /* editor */
 
 .cm-header-1 {
-  font-family: var(--font-family-editor);
   color: var(--text-title-h1);
 }
 
 .cm-header-2 {
-  font-family: var(--font-family-editor);
   color: var(--text-title-h2);
 }
 
 .cm-header-3 {
-  font-family: var(--font-family-editor);
   color: var(--text-title-h3);
 }
 
 .cm-header-4 {
-  font-family: var(--font-family-editor);
   color: var(--text-title-h4);
 }
 
 .cm-header-5 {
-  font-family: var(--font-family-editor);
   color: var(--text-title-h5);
 }
 
 .cm-header-6 {
-  font-family: var(--font-family-editor);
   color: var(--text-title-h6);
 }
 
@@ -668,7 +640,6 @@ mark {
 
 .checkbox-container.is-enabled {
   background-color: var(--interactive-accent);
-  color
 }
 
 
