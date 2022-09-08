@@ -64,12 +64,6 @@ a:not(.internal-link) {
   background-color: var(--text-normal);
 }
 
-/* internal embedded link rendering in preview */
-
-.markdown-embed-title {
-  font-weight: 600;
-}
-
 .markdown-embed {
   padding-left: 8px !important;
   padding-right: 4px !important;
@@ -80,7 +74,6 @@ a:not(.internal-link) {
 /* internal embedded link rendering in preview */
 
 .markdown-embed-title {
-  font-weight: 600;
   color: var(--text-link);
 }
 
@@ -142,11 +135,6 @@ a:not(.internal-link) {
 
 /* CODEBLOCKS */
 
-/* code and code blocks for preview */
-
-.markdown-preview-view code {
-  font-size: 13.5px;
-}
 
 /* code blocks in preview */
 
@@ -245,7 +233,6 @@ blockquote {
 blockquote:before {
   font: 14px/20px italic Times, serif;
   content: "“";
-  font-size: 3em;
   line-height: 0.1em;
   vertical-align: -0.4em;
 }
@@ -267,7 +254,6 @@ img {
 /* TABLES */
 
 th {
-  font-weight: 800 !important;
   border: 1px solid var(--background-primary-alt) !important;
 }
 
@@ -402,19 +388,6 @@ button.mod-cta {
   color: var(--text-normal);
 }
 
-/* side dock text, like file names and backlink context */
-
-.side-dock-panels-container {
-  font-size: 13px !important;
-}
-
-/* side dock titles at top */
-
-.side-dock-title {
-  font-size: 20px !important;
-  font-weight: 800 !important;
-}
-
 /* hover actions on side dock navigation */
 
 .side-dock-ribbon-tab:hover,
@@ -454,7 +427,6 @@ button.mod-cta {
 
 .status-bar-item {
   font-family: var(--font-family-preview);
-  font-size: 12px;
 }
 
 /* clean up side bar empty state (e.g. unlinked mentions) */
@@ -472,7 +444,6 @@ button.mod-cta {
 
 .markdown-preview-view {
   font-family: var(--font-family-preview);
-  font-size: 15px;
   color: var(--text-normal);
   padding-left: 8% !important;
   padding-right: 4% !important;
@@ -480,7 +451,6 @@ button.mod-cta {
 
 .mod-single-child .markdown-preview-view {
   font-family: var(--font-family-preview);
-  font-size: 15px;
   color: var(--text-normal);
   padding-left: 10% !important;
   padding-right: 10% !important;
@@ -490,7 +460,6 @@ button.mod-cta {
 
 .cm-s-obsidian {
   font-family: var(--font-family-editor);
-  font-size: 15px;
   color: var(--text-normal);
   padding-left: 8% !important;
   padding-right: 4% !important;
@@ -498,7 +467,6 @@ button.mod-cta {
 
 .mod-single-child .cm-s-obsidian {
   font-family: var(--font-family-editor);
-  font-size: 15px;
   color: var(--text-normal);
   padding-left: 8% !important;
   padding-right: 4% !important;
@@ -510,49 +478,31 @@ button.mod-cta {
 
 .markdown-preview-view h1 {
   font-family: var(--font-family-preview);
-  font-weight: 500;
-  font-size: 28px;
-  font-weight: bold;
   color: var(--text-title-h1);
 }
 
 .markdown-preview-view h2 {
   font-family: var(--font-family-preview);
-  font-weight: 500;
-  font-size: 26px;
-  font-weight: bold;
   color: var(--text-title-h2);
 }
 
 .markdown-preview-view h3 {
   font-family: var(--font-family-preview);
-  font-weight: 500;
-  font-size: 23px;
-  font-weight: bold;
   color: var(--text-title-h3);
 }
 
 .markdown-preview-view h4 {
   font-family: var(--font-family-preview);
-  font-weight: 500;
-  font-size: 20px;
-  font-weight: bold;
   color: var(--text-title-h4);
 }
 
 .markdown-preview-view h5 {
   font-family: var(--font-family-preview);
-  font-weight: 500;
-  font-size: 18px;
-  font-weight: bold;
   color: var(--text-title-h5);
 }
 
 .markdown-preview-view h6 {
   font-family: var(--font-family-preview);
-  font-weight: 500;
-  font-size: 16px;
-  font-weight: bold;
   color: var(--text-title-h6);
 }
 
@@ -560,49 +510,31 @@ button.mod-cta {
 
 .cm-header-1 {
   font-family: var(--font-family-editor);
-  font-weight: 500;
-  font-size: 28px;
-  font-weight: bold;
   color: var(--text-title-h1);
 }
 
 .cm-header-2 {
   font-family: var(--font-family-editor);
-  font-weight: 500;
-  font-size: 26px;
-  font-weight: bold;
   color: var(--text-title-h2);
 }
 
 .cm-header-3 {
   font-family: var(--font-family-editor);
-  font-weight: 500;
-  font-size: 23px;
-  font-weight: bold;
   color: var(--text-title-h3);
 }
 
 .cm-header-4 {
   font-family: var(--font-family-editor);
-  font-weight: 500;
-  font-size: 20px;
-  font-weight: bold;
   color: var(--text-title-h4);
 }
 
 .cm-header-5 {
   font-family: var(--font-family-editor);
-  font-weight: 500;
-  font-size: 18px;
-  font-weight: bold;
   color: var(--text-title-h5);
 }
 
 .cm-header-6 {
   font-family: var(--font-family-editor);
-  font-weight: 500;
-  font-size: 16px;
-  font-weight: bold;
   color: var(--text-title-h6);
 }
 
@@ -626,14 +558,12 @@ a.tag {
 
 strong {
   color: var(--markup-code);
-  font-weight: 700;
 }
 
 /* editor */
 
 .cm-strong {
   color: var(--markup-code);
-  font-weight: 700;
 }
 
 /* ITALICS */
@@ -712,7 +642,6 @@ mark {
   content: "✓";
   position: absolute;
   color: var(--interactive-accent);
-  font-size: 1em;
   line-height: 1.25em;
   width: 1.2em;
   text-align: center;
@@ -750,7 +679,6 @@ mark {
 /* dashes in bullets */
 
 .cm-formatting-list {
-  font-weight: 700;
 }
 
 .cm-formatting
@@ -765,20 +693,17 @@ mark {
 .CodeMirror-foldgutter-folded:after,
 .CodeMirror-foldgutter-open:after {
   opacity: 0.5;
-  font-size: 60%;
   color: var(--text-link);
 }
 
 .CodeMirror-foldgutter-folded:hover:after,
 .CodeMirror-foldgutter-open:hover:after {
   opacity: 1;
-  font-size: 60%;
   color: var(--text-link);
 }
 
 .CodeMirror-foldgutter-folded:after {
   content: "\25BA";
-  font-size: 60%;
   color: var(--text-link);
 }
 
