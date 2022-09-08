@@ -291,6 +291,7 @@ thead {
   color: var(--text-normal) !important;
 }
 
+
 .status-bar {
   background-color: var(--background-secondary-alt);
 }
@@ -370,6 +371,10 @@ button.mod-cta {
   color: var(--text-normal) !important;
 }
 
+.nav-action-button.is-active {
+  background-color: var(--background-secondary-alt);
+}
+
 .search-result-file-title {
   color: var(--text-a) !important;
   background-color: var(--background-secondary);
@@ -399,6 +404,10 @@ button.mod-cta {
   color: var(--text-normal);
 }
 
+/* Hover color over tree item flairs */
+.tree-item-self:hover .tree-item-flair {
+  background-color: var(--background-secondary);
+}
 
 /* clean up side bar empty state (e.g. unlinked mentions) */
 
