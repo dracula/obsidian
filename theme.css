@@ -4,6 +4,7 @@
   --background-secondary: #1a1e24;
   --background-secondary-alt: #282a36;
   --text-normal: #f8f8f2;
+  --text-on-accent: #282a36;
   --text-title-h1: #bd93f9;
   --text-title-h2: #ffb86c;
   --text-title-h3: #52fa7c;
@@ -292,7 +293,6 @@ thead {
   color: var(--text-normal) !important;
 }
 
-
 .status-bar {
   background-color: var(--background-secondary-alt);
 }
@@ -316,7 +316,12 @@ thead {
 
 button.mod-cta {
     background-color: var(--interactive-accent);
-    color: var(--interactive-normal);
+    color: var(--text-on-accent);
+}
+
+.horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
 }
 
 /* searchbar */
