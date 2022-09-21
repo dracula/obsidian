@@ -15,9 +15,9 @@ git clone https://github.com/dracula/obsidian.git
 
 Download using the [GitHub .zip download](https://github.com/dracula/obsidian/archive/main.zip) option and unzip them.
 
-#### Activating theme
+#### Activating theme manually [Obsidian.md < 0.16]
 
-1. Move or symlink the `obsidian.css` file into your vault's `.obsidian/themes/` folder.
+1. Depending on your `Obsidian.md` version, move or symlink either the `obsidian.css` file for versions below `0.16` or the `theme.css` file for versions at `0.16` or later into your vault's `.obsidian/themes/` folder.
 2. Rename the file to something memorable, like `Dracula.css`
 3. Select the theme via `Options -> Appearance --> Themes --> Manage`. It should take effect immediately.
 4. Boom! It's working.
