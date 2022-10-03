@@ -407,6 +407,11 @@ button.mod-cta {
   background-color: var(--background-secondary);
 }
 
+.flair.mod-pop {
+  background-color: var(--interactive-accent);
+  color: var(--interactive-normal);
+}
+
 /* clean up side bar empty state (e.g. unlinked mentions) */
 
 .search-empty-state {
