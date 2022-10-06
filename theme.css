@@ -364,9 +364,17 @@ button.mod-cta {
   background-color: var(--background-secondary);
 }
 
+.is-translucent .nav-file-title {
+  background-color: transparent;
+}
+
 .nav-folder-title {
   color: var(--text-muted) !important;
   background-color: var(--background-secondary);
+}
+
+.is-translucent .nav-folder-title {
+  background-color: transparent;
 }
 
 .nav-file-title:hover {
