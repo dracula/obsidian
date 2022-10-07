@@ -394,6 +394,10 @@ button.mod-cta {
   background-color: var(--background-secondary);
 }
 
+.is-translucent .search-result-file-title {
+  background-color: transparent;
+}
+
 .search-result-file-matched-text {
   color: var(--text-link) !important;
   background-color: var(--background-secondary);
