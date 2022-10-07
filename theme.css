@@ -364,7 +364,7 @@ button.mod-cta {
   background-color: var(--background-secondary);
 }
 
-.is-translucent .nav-file-title {
+.is-translucent .nav-file-title:not(.is-active) {
   background-color: transparent;
 }
 
