@@ -356,17 +356,9 @@ button.mod-cta {
   background-color: var(--background-secondary);
 }
 
-.is-translucent .nav-file-title:not(.is-active) {
-  background-color: transparent;
-}
-
 .nav-folder-title {
   color: var(--text-muted) !important;
   background-color: var(--background-secondary);
-}
-
-.is-translucent .nav-folder-title {
-  background-color: transparent;
 }
 
 .nav-file-title:hover {
@@ -384,10 +376,6 @@ button.mod-cta {
 .search-result-file-title {
   color: var(--text-a) !important;
   background-color: var(--background-secondary);
-}
-
-.is-translucent .search-result-file-title {
-  background-color: transparent;
 }
 
 .search-result-file-matched-text {
