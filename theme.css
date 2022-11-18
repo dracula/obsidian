@@ -34,9 +34,9 @@ a,
 .cm-hmd-internal-link,
 .cm-link,
 .cm-formatting-link {
-  color: var(--text-a) !important;
-  text-decoration: none !important;
-  font-family: Avenir, Avenir Next, sans-serif !important;
+  color: var(--text-a);
+  text-decoration: none;
+  font-family: Avenir, Avenir Next, sans-serif;
 }
 
 /* url's */
@@ -521,7 +521,7 @@ button.mod-cta {
 /* preview */
 
 a.tag {
-  color: var(--text-tag) !important;
+  color: var(--text-tag);
 }
 
 /* editor */
