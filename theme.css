@@ -563,8 +563,8 @@ em {
 /* preview */
 
 mark {
-  color: var(--background-primary) !important;
-  background-color: var(--text-mark) !important;
+  color: var(--background-primary);
+  background-color: var(--text-mark);
   padding-top: 1px;
   padding-bottom: 1px;
 }
