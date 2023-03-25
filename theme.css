@@ -150,6 +150,7 @@ hr {
 
 pre code {
   padding: 5px !important;
+  color: var(--code-normal) !important;
   line-height: normal;
   display: block;
   background-color: var(--background-primary-alt) !important;
@@ -185,7 +186,7 @@ code,
 /* preview */
 
 .markdown-preview-view code {
-  color: var(--markup-code) !important;
+  color: var(--code-normal);
   background-color: var(--background-primary-alt) !important;
   bottom: -0.1px !important;
 }
