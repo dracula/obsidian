@@ -744,3 +744,14 @@ ol {
 .is-selected {
   background-color: var(--blockquote-border)!important;
 }
+
+@media print { 
+  @page {
+    margin: 0mm 0mm 0mm 0mm;
+  }
+  .print .markdown-preview-view { 
+      -webkit-print-color-adjust: exact; 
+      background-color: #282a36; 
+      color: #f8f8f2;
+  }
+}
