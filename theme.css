@@ -96,12 +96,6 @@ hr {
   color: var(--text-link);
 }
 
-.markdown-embed {
-  padding-left: 8px !important;
-  padding-right: 4px !important;
-  margin-left: 8px !important;
-  margin-right: 4px !important;
-}
 
 /* NAKED EMBEDS*/
 
@@ -119,9 +113,6 @@ hr {
   margin-bottom: 0;
 }
 
-.markdown-embed {
-  background-color: var(--background-primary-alt) !important;
-}
 
 .markdown-embed-link {
   color: var(--text-a) !important;
