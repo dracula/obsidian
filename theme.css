@@ -62,8 +62,19 @@ a:not(.internal-link) {
 
 /* horizontal line in preview */
 
+hr {
+  background-color: var(--text-normal);
+  border-color: var(--text-normal);
+}
+
 .markdown-preview-view hr {
   background-color: var(--text-normal);
+  border-color: var(--text-normal);
+}
+
+.markdown-rendered hr {
+  background-color: var(--text-normal);
+  border-color: var(--text-normal);
 }
 
 .markdown-embed {
