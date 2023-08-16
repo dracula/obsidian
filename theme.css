@@ -1,4 +1,5 @@
-.theme-dark {
+.theme-dark,
+.theme-light{
   --background-primary: #282a36;
   --background-primary-alt: #44475a;
   --background-secondary: #1a1e24;
