@@ -18,7 +18,7 @@
   --canvas-color-4:  82, 250, 124;
   --canvas-color-5: 139, 233, 253;
   --canvas-color-6: 189, 147, 244;
-  --text-link: #8be9fd;
+  --text-link: var(--text-accent);
   --markup-code: #ffb86c;
   --text-tag: #50fa7b;
   --text-a: #ff79c6;
