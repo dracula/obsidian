@@ -755,9 +755,7 @@ ol {
       background-color: #282a36;
       color: #f8f8f2;
   }
-  pre,
-  code span,
-  code {
-      color: #A9AAAC !important;
+  .markdown-rendered code {
+      color: #BABABA !important;
   }
 }
