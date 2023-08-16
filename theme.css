@@ -750,15 +750,14 @@ ol {
   @page {
     margin: 0mm 0mm 0mm 0mm;
   }
-  .print .markdown-preview-view { 
-      -webkit-print-color-adjust: exact; 
-      background-color: #282a36; 
+  .print .markdown-preview-view {
+      -webkit-print-color-adjust: exact;
+      background-color: #282a36;
       color: #f8f8f2;
   }
   pre,
   code span,
   code {
-      color: #5a5a5a !important;
-      background-color: #fafafa !important;
+      color: #A9AAAC !important;
   }
 }
