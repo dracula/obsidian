@@ -36,16 +36,6 @@
 
 /* link */
 
-a,
-.internal-link,
-.cm-hmd-internal-link,
-.cm-link,
-.cm-formatting-link {
-  color: var(--text-a);
-  text-decoration: none;
-  font-family: Avenir, Avenir Next, sans-serif;
-}
-
 /* url's */
 
 /* editor */
