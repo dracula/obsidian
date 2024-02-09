@@ -83,7 +83,15 @@
   --accent-s: 94%;
   --accent-l: 65%;
 
-
+  /* Dracula Code view*/
+  --dracula-foreground: #F8F8F2;
+  --dracula-Comment: #6272A4;
+  --dracula-keyword: #FF79C6;
+  --dracula-definition: #50FA7B;
+  --dracula-variable: #F8F8F2; /*"variable" tags are used everywhere in code, but Dracula usually only uses orange color only for declaration inputs, thus white is less annoying to look at*/
+  --dracula-number: #BD93F9;
+  --dracula-function: #8BE9FD;
+  --dracula-string: #F1FA8C;
 }
 
 /* LINKS & BRACKETS */
@@ -195,10 +203,10 @@ hr {
 
 pre code {
   padding: 5px !important;
-  color: var(--code-normal) !important;
+  color: var(--dracula-foreground);
   line-height: normal;
   display: block;
-  background-color: var(--background-primary-alt) !important;
+  background-color: var(--background-primary-alt);
 }
 
 .markdown-preview-view pre {
@@ -220,6 +228,39 @@ code,
 
 .CodeMirror-code span.cm-inline-code {
   color: var(--markup-code) !important;
+}
+
+.cm-hmd-codeblock {
+  color: var(--dracula-foreground);
+}
+
+.cm-hmd-codeblock.cm-keyword {
+  color: var(--dracula-keyword);
+}
+
+
+.cm-def.cm-hmd-codeblock {
+  color: var(--dracula-definition);
+}
+
+.cm-hmd-codeblock.cm-variable {
+  color: var(--dracula-variable);
+}
+
+.cm-hmd-codeblock.cm-operator{
+  color: var(--dracula-keyword);
+}
+
+.cm-hmd-codeblock.cm-number {
+  color: var(--dracula-number);
+}
+
+.cm-builtin.cm-hmd-codeblock {
+  color: var(--dracula-function);
+}
+
+.cm-hmd-codeblock.cm-string {
+  color: var(--dracula-string);
 }
 
 /* Editor CodeBlock TEXT Appearance - */
