@@ -84,6 +84,8 @@
   --accent-l: 65%;
 
   /* Dracula Code view*/
+  --code-normal: #F8F8F2;
+  --code-background: #282a36;
   --dracula-foreground: #F8F8F2;
   --dracula-Comment: #6272A4;
   --dracula-keyword: #FF79C6;
@@ -206,7 +208,7 @@ pre code {
   color: var(--dracula-foreground);
   line-height: normal;
   display: block;
-  background-color: var(--background-primary-alt);
+  background-color: var(--background-primary);
 }
 
 .markdown-preview-view pre {
@@ -215,16 +217,15 @@ pre code {
 
 /* in-line code for editor and preview and code block for editor*/
 
-code,
 .cm-inline-code {
   background-color: var(--background-primary-alt) !important;
-  color: var(--markup-code) !important;
+  color: var(--dracula-foreground) !important;
   bottom: 0px !important;
 }
 
 /* Code Appearance */
 
-/* editor */
+/* Editing view */
 
 .CodeMirror-code span.cm-inline-code {
   color: var(--markup-code) !important;
@@ -237,7 +238,6 @@ code,
 .cm-hmd-codeblock.cm-keyword {
   color: var(--dracula-keyword);
 }
-
 
 .cm-def.cm-hmd-codeblock {
   color: var(--dracula-definition);
@@ -263,18 +263,41 @@ code,
   color: var(--dracula-string);
 }
 
+/* Preview */
+
+code {
+  background-color: var(--background-primary);
+  color: var(--dracula-foreground);
+}
+
+.token.function {
+  color: var(--dracula-definition);
+}
+
+.token.operator {
+  color: var(--dracula-keyword);
+}
+
+.token.number {
+  color: var(--dracula-number);
+}
+
+.token.builtin {
+  color: var(--dracula-function);
+}
+
+.token.boolean {
+  color: var(--dracula-number);
+}
+
+.token.string {
+  color: var(--dracula-string);
+}
+
 /* Editor CodeBlock TEXT Appearance - */
 
 .cm-s-obsidian pre.HyperMD-codeblock {
   color: var(--markup-code) !important;
-}
-
-/* preview */
-
-.markdown-preview-view code {
-  color: var(--code-normal);
-  background-color: var(--background-primary-alt) !important;
-  bottom: -0.1px !important;
 }
 
 /* borders */
