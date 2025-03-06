@@ -743,7 +743,6 @@ mark {
   background-color: var(--background-primary-alt);
   border-radius: 14px;
   display: inline-block;
-  height: 22px;
   position: relative;
   top: 4px;
   user-select: none;
