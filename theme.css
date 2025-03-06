@@ -82,6 +82,7 @@
   --accent-h: 135;
   --accent-s: 94%;
   --accent-l: 65%;
+  --titlebar-background-focused: var(--titlebar-background);
 
   /* Dracula Code view*/
   --code-normal: #F8F8F2;
