@@ -464,18 +464,9 @@ button.mod-cta {
   background-color: var(--background-secondary);
 }
 
-.nav-file-title {
-  color: var(--text-muted) !important;
-  background-color: var(--background-secondary);
-}
 
 .is-translucent .nav-file-title:not(.is-active) {
   background-color: transparent;
-}
-
-.nav-folder-title {
-  color: var(--text-muted) !important;
-  background-color: var(--background-secondary);
 }
 
 .is-translucent .nav-folder-title {
