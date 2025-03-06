@@ -4,6 +4,8 @@
 
 This theme can be found from within Obsidian under `Options -> Appearance --> Themes --> Manage` , when searching for `Dracula Official` under `Community themes`.
 
+![Official installation](Installation.png)
+
 #### Install using Git
 
 If you are a git user, you can install the theme and keep up to date by cloning the repo:
