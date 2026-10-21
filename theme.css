@@ -76,6 +76,8 @@
   --text-a: #ff79c6;
   --text-a-hover: #ff79c0;
   --text-mark: #f1fa8c;
+  /* Default used by Obsidian for plain (uncolored) ==highlights== */
+  --highlight-background: #f1fa8c;
   --interactive-accent: #50fa7b;
   --blockquote-border: #b294bb;
   --interactive-accent-rgb: #f1fa8c;
@@ -673,21 +675,25 @@ em {
 }
 
 /* HIGHLIGHT */
+/* Colored highlights (Obsidian 1.14): Obsidian paints each highlight color
+   itself and exposes the default via --highlight-background. Only style
+   uncolored highlights here, and never with !important, so the per-color
+   rules are not overridden. */
 
 /* preview */
 
-mark {
+mark:not([data-highlight]) {
   color: var(--background-primary);
-  background-color: var(--text-mark);
+  background-color: var(--highlight-background);
   padding-top: 1px;
   padding-bottom: 1px;
 }
 
 /* editor */
 
-.cm-highlight {
-  color: var(--background-primary) !important;
-  background-color: var(--text-mark) !important;
+.cm-highlight:not([data-highlight]) {
+  color: var(--background-primary);
+  background-color: var(--highlight-background);
   padding-top: 1px;
   padding-bottom: 1px;
 }
@@ -763,7 +769,7 @@ mark {
 }
 
 
-.markdown-preview-view mark {
+.markdown-preview-view mark:not([data-highlight]) {
   color: var(--text-link);
   background-color: var(--background-primary-alt);
 }
