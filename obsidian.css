@@ -252,9 +252,10 @@ blockquote p {
 
 /* IMAGES */
 
-/* embedded images */
+/* embedded images. .highlight-swatch is the editor's inline color-swatch
+   widget (obsidian core), not an embedded image — keep it inline. */
 
-img {
+img:not(.highlight-swatch) {
   display: block;
   margin-left: auto;
   margin-right: auto;
