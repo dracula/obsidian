@@ -677,14 +677,20 @@ em {
 /* HIGHLIGHT */
 /* Colored highlights (Obsidian 1.14): Obsidian paints each highlight color
    itself and exposes the default via --highlight-background. Only style
-   uncolored highlights here, and never with !important, so the per-color
-   rules are not overridden. */
+   uncolored highlights here so the per-color rules are not overridden. */
 
 /* preview */
 
+/* !important on color and mix-blend-mode: Obsidian's core mark rule sets
+   a light text color, and this theme's
+   `--highlight-mix-blend-mode: lighten` would erase any dark text, both
+   beating a plain selector. Safe because this selector never matches
+   colored highlights, so no per-color styling is overridden. */
+
 mark:not([data-highlight]) {
-  color: var(--background-primary);
+  color: var(--background-primary) !important;
   background-color: var(--highlight-background);
+  mix-blend-mode: normal !important;
   padding-top: 1px;
   padding-bottom: 1px;
 }
@@ -692,8 +698,9 @@ mark:not([data-highlight]) {
 /* editor */
 
 .cm-highlight:not([data-highlight]) {
-  color: var(--background-primary);
+  color: var(--background-primary) !important;
   background-color: var(--highlight-background);
+  mix-blend-mode: normal !important;
   padding-top: 1px;
   padding-bottom: 1px;
 }
@@ -768,11 +775,6 @@ mark:not([data-highlight]) {
   background-color: var(--interactive-accent);
 }
 
-
-.markdown-preview-view mark:not([data-highlight]) {
-  color: var(--text-link);
-  background-color: var(--background-primary-alt);
-}
 
 .cm-formatting
 /* This is the color of header hashtags. Don't change. */
