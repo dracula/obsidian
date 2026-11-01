@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "*.*.*" # only trigger on version-shaped tags (X.Y.Z)
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify tag matches manifest.json
+        run: |
+          VERSION="$(jq -r '.version' manifest.json)"
+          if [ "$GITHUB_REF_NAME" != "$VERSION" ]; then
+            echo "::error::Tag '$GITHUB_REF_NAME' does not match manifest.json version '$VERSION'."
+            exit 1
+          fi
+          echo "Tag matches manifest.json: $VERSION"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          VERSION="$(jq -r '.version' manifest.json)"
+          gh release create "$VERSION" \
+            --title "$VERSION" \
+            --notes "Dracula Official theme $VERSION" \
+            manifest.json theme.css
